@@ -5,6 +5,7 @@ import Editor from './components/Editor';
 import FormGenerator from './components/FormGenerator';
 
 import schema from './config/testForm'
+import Title from './shared/Title';
 const AppGrid = styled.div`
   height: 100%;
   display: grid;
@@ -68,6 +69,9 @@ class App extends Component {
           />
         </GridCard>
         <GridCard gridArea='form'>
+          <Title>
+            Generated Form
+          </Title>
           <FormGenerator
             schema={JSON.stringify(this.state.schema)}
             onChange={this.onFormDataChange}/>

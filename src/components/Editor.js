@@ -3,8 +3,8 @@ import { UnControlled as CodeMirror } from "react-codemirror2";
 import 'codemirror/lib/codemirror.css';
 import 'codemirror/theme/material.css';
 import "codemirror/mode/javascript/javascript";
-import styled from 'styled-components';
 import "../codeMirror.css";
+import Title from '../shared/Title';
 const cmOptions = {
   theme: "default",
   viewportMargin: Infinity,
@@ -18,11 +18,7 @@ const cmOptions = {
   indentWithTabs: false,
   tabSize: 2
 };
-const Title = styled.div`
-  padding: 8px;
-  border-bottom: 1px solid rgba(0,0,0,.25);
-  font-weight: 500;
-`
+
 class Editor extends Component {
   constructor(props) {
     super(props);
